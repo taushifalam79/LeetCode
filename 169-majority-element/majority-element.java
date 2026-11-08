@@ -21,6 +21,7 @@
 // }
 
 // applied optimal solution 
+// using Boyer-Moore Voting Algorithm 
 
 class Solution {
     public int majorityElement(int[] nums) {
