@@ -8,17 +8,17 @@
 // }
 class Solution {
     public int findKthLargest(int[] nums, int k) {
-        return quickSort(nums,0,nums.length-1,nums.length-k);
+        return quickSelect(nums,0,nums.length-1,nums.length-k);
     }
-    public int quickSort(int [] nums, int low, int high, int target){
+    public int quickSelect(int [] nums, int low, int high, int target){
         if(low == high){
             return nums[low];
         }
         int pi = partition(nums,low,high);
         if(target <= pi){
-            return quickSort(nums,low,pi,target );
+            return quickSelect(nums,low,pi,target );
         }else{
-            return quickSort(nums,pi+1, high, target);
+            return quickSelect(nums,pi+1, high, target);
         }
     }
     public int partition(int [] nums , int low, int high){
