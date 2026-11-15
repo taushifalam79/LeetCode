@@ -5,22 +5,22 @@ class Solution {
         int i = 0;
         int j = 0;
 
-        // while(j < m){
-        //     if(s1[i] != t1[j]){
-        //         j++;
-        //     }
-        //     else{
-        //         i++;
-        //         j++;
-        //     }
-        // }
-
-        while (j < t1.length) {
-        if (s1.length > i && s1[i] == t1[j]) {
-            i++;
+        while(j < t1.length){
+            if(s1.length > i && s1[i] == t1[j]){
+                i++;
+                j++;
+            }
+            else{
+                j++;
+            }
         }
-        j++;
-    }
+
+    //     while (j < t1.length) {
+    //     if (s1.length > i && s1[i] == t1[j]) {
+    //         i++;
+    //     }
+    //     j++;
+    // }
         return i == s1.length;
     }
 }
