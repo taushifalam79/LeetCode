@@ -10,11 +10,11 @@ class Solution {
             while(count > k){
                 if(nums[left] == 0){
                     count--;
-                    left++;
                 }
-                else{
-                    left++;
-                }
+                left++;
+                // else{
+                //     left++;
+                // }
             }
             int length = right - left +1;
             windowLength = Math.max(windowLength,length);
